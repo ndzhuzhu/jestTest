@@ -1,19 +1,15 @@
-// //引入文件
-// const testFile = require('./jestTest.js')
-// //解构文件中的函数
-// const {create4DigitRandom,judgeRandomSimilarity} = testFile
+import {create4DigitRandom} from './jestTest.js'
 
-//es6
-import {create4DigitRandom,judgeRandomSimilarity} from './jestTest.js'
-
-test('create4DigitRandom - ',()=>{
+test('create4DigitRandom - 返回四位数',()=>{
     let resultArr = create4DigitRandom().toString().split("")
-    expect([...new Set(resultArr)].length).toBe(4)
-    expect(create4DigitRandom()).toBeLessThan(10000)
-    expect(create4DigitRandom()).toBeGreaterThan(999)
+    expect(resultArr).toHaveLength(4)
 })
-
-test('judgeRandomSimilarity - ',()=>{
-
-    expect(judgeRandomSimilarity(1234567890)).toBe('异位相似')
+test('create4DigitRandom - 返回四位数中每位皆为数字',()=>{
+    let result = create4DigitRandom()
+    let resultInt = parseInt(result)
+    expect(resultInt).toEqual(result)
+})
+test('create4DigitRandom - 返回四位数无重复数字',()=>{
+    let resultArr = create4DigitRandom().toString().split("")
+    expect([...new Set(resultArr)]).toHaveLength(4)
 })
