@@ -4,15 +4,17 @@ import {create4DigitRandom} from './jestTest.js'
 export function judgeRandomSimilarity(num){
     let randomArr = create4DigitRandom().toString().split("")
     let numArr = num.toString().split("")
-    let result = '不相似'
-    randomArr.map((item,index) => {
-        var numIndex = numArr.indexOf(item)
-        //不写>=0会出错？
-        if(numIndex >= 0 && result == '不相似'){
-            result = '异位相似'
-        }else if(numIndex == index ){
-            result = '同位相似'
-        } 
-    })
-    return result
+    let result = [0,0]
+    for(let i = 0 ; i < 4 ; i++){
+        for(let j = 0 ; j < 4 ; j++){
+            if (randomArr[i] == numArr[j]){
+                if (i == j){
+                    result[0]++
+                }else{
+                    result[1]++
+                }
+            }
+        }
+    }
+    return `相同位数数字-不同位数数字: ${result[0]} - ${result[1]}`
 }

@@ -13,3 +13,13 @@ test('create4DigitRandom - 返回四位数无重复数字',()=>{
     let resultArr = create4DigitRandom().toString().split("")
     expect([...new Set(resultArr)]).toHaveLength(4)
 })
+
+// jest.mock("./jestTest.js",()=>{
+//     const originalModule = jest.requireActual('./jestTest.js');
+//     return {
+//         // __esModule: true,
+//         create4DigitRandom:jest.fn(()=>1234),
+//         // judgeRandomSimilarity,
+//         ...originalModule,
+//     }
+// })

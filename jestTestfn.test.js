@@ -5,30 +5,22 @@ jest.mock("./jestTest.js",()=>{
         create4DigitRandom:jest.fn(()=>1234)
     }
 })
-// jest.mock('../foo-bar-baz', () => {
-//     const originalModule = jest.requireActual('../foo-bar-baz');
-  
-//     //Mock the default export and named export 'foo'
-//     return {
-//       __esModule: true,
-//       ...originalModule,
-//       default: jest.fn(() => 'mocked baz'),
-//       foo: 'mocked foo',
-//     };
-//   });
 
-test('judgeRandomSimilarity - 异位相似',()=>{
-    expect(judgeRandomSimilarity(2345)).toBe('异位相似')
-    // let mockFn = jest.fn().mockReturnValue(1234);
-    // expect(mockFn()).toBe("1234");
-    //myMock.mockReturnValueOnce(10).mockReturnValueOnce('x').mockReturnValue(true);
-         // > 10 'x' true
-    //expect(judgeRandomSimilarity(1234567890)).toBe('异位相似')
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 4 - 0',()=>{
+    expect(judgeRandomSimilarity(1234) === '相同位数数字-不同位数数字: 4 - 0').toBeTruthy()
 })
-test('judgeRandomSimilarity - 同位相似',()=>{
-    expect(judgeRandomSimilarity(1234)).toBe('同位相似')
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 3 - 0',()=>{
+    expect(judgeRandomSimilarity(5234) === '相同位数数字-不同位数数字: 3 - 0').toBeTruthy()
 })
-test('judgeRandomSimilarity - 不相似',()=>{
-    expect(judgeRandomSimilarity(6789)).toBe('不相似')
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 3 - 1',()=>{
+    expect(judgeRandomSimilarity(2234) === '相同位数数字-不同位数数字: 3 - 1').toBeTruthy()
 })
-//非四位数
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 2 - 0',()=>{
+    expect(judgeRandomSimilarity(5634) === '相同位数数字-不同位数数字: 2 - 0').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 2 - 1',()=>{
+    expect(judgeRandomSimilarity(2634) === '相同位数数字-不同位数数字: 2 - 1').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 2 - 2',()=>{
+    expect(judgeRandomSimilarity(2134) === '相同位数数字-不同位数数字: 2 - 2').toBeTruthy()
+})

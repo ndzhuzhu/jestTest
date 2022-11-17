@@ -1,6 +1,5 @@
 //生成没有重复数字的四位数
 export function create4DigitRandom(){
-    //set实现
     let set = new Set()
     let digit = 4
     let random = Math.floor(Math.random()*9 + 1)
