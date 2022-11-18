@@ -24,3 +24,32 @@ test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 2 - 1',()=>
 test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 2 - 2',()=>{
     expect(judgeRandomSimilarity(2134) === '相同位数数字-不同位数数字: 2 - 2').toBeTruthy()
 })
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 1 - 0',()=>{
+    expect(judgeRandomSimilarity(7894) === '相同位数数字-不同位数数字: 1 - 0').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 1 - 1',()=>{
+    expect(judgeRandomSimilarity(7814) === '相同位数数字-不同位数数字: 1 - 1').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 1 - 2',()=>{
+    expect(judgeRandomSimilarity(2814) === '相同位数数字-不同位数数字: 1 - 2').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 1 - 3',()=>{
+    expect(judgeRandomSimilarity(2314) === '相同位数数字-不同位数数字: 1 - 3').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 0 - 0',()=>{
+    expect(judgeRandomSimilarity(7896) === '相同位数数字-不同位数数字: 0 - 0').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 0 - 1',()=>{
+    expect(judgeRandomSimilarity(7891) === '相同位数数字-不同位数数字: 0 - 1').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 0 - 2',()=>{
+    expect(judgeRandomSimilarity(7821) === '相同位数数字-不同位数数字: 0 - 2').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 0 - 3',()=>{
+    expect(judgeRandomSimilarity(7321) === '相同位数数字-不同位数数字: 0 - 3').toBeTruthy()
+})
+test('judgeRandomSimilarity - 相同位数数字-不同位数数字: 0 - 4',()=>{
+    expect(judgeRandomSimilarity(4321) === '相同位数数字-不同位数数字: 0 - 4').toBeTruthy()
+})
+
+
