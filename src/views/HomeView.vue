@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="随机数小游戏" hint= "猜测一个无重复数字的四位数，根据结果给予提示"/>
   </div>
 </template>
 
