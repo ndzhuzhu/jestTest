@@ -2,10 +2,17 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h4>{{hint}}</h4>
+    <h4>您已猜测次数: {{guessCount}}</h4>
+    <h4>最好记录：{{lastCount}}</h4>
     <a-input-group compact>
-      <a-input v-model:value="randomInput" style="width: calc(100% - 1000px)" placeholder="请输入一个四位数"/>
+      <a-input v-model:value="randomInput" style="width: calc(100% - 1000px)" placeholder="请输入一个四位数" @pressEnter="inputValidation()"/>
       <a-button type="primary" @click="inputValidation()">确认</a-button>
     </a-input-group>
+    <div>
+      <div>您的猜测记录：</div>
+      <div style="width:280px;margin:0 auto">{{countHistory}} </div>
+      
+    </div>
   </div>
 </template>
 
@@ -20,6 +27,9 @@ export default {
   },
   setup() {
     var randomInput = ref('')
+    var guessCount = ref("0")
+    var countHistory = ref("")
+    var lastCount = ref(100000)
     //生成没有重复数字的四位数
     const create4DigitRandom = () =>{
       let set = new Set()
@@ -60,16 +70,29 @@ export default {
       return `相同位数数字-不同位数数字: ${result[0]} - ${result[1]}`
     }
     const inputValidation = () =>{
+      console.log(preRandom)
       var result = judgeRandomSimilarity(randomInput.value)
       if (!randomInput.value.match(/^\d{4}$/g)){
         message.error('请输入一个四位数', 5);
       }else if (result == '相同位数数字-不同位数数字: 4 - 0'){
         message.success('恭喜你！');
+        lastCount.value = Math.min(lastCount.value,guessCount.value)
+        guessCount.value =0
+        countHistory.value = ""
+        preRandom = create4DigitRandom()
+
       }else{
           message.warning(result, 5);
+          
+          guessCount.value++;
+          countHistory.value += "\n" + randomInput.value + " ： " + result
+          randomInput.value = ""
       }
     }
     return{
+      lastCount,
+      guessCount,
+      countHistory,
       randomInput,
       inputValidation,
       create4DigitRandom
