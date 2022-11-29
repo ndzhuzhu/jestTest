@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HelloWorld msg="随机数小游戏" hint= "猜测一个无重复数字的四位数，根据结果给予提示"/>
+    <HelloWorld msg="随机数小游戏" hint= "猜测一个无重复数字的四位数"/>
   </div>
 </template>
 
@@ -15,3 +15,8 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  .home{
+    margin-top: 6rem
+  }
+</style>

@@ -2,16 +2,21 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h4>{{hint}}</h4>
-    <h4>您已猜测次数: {{guessCount}}</h4>
-    <h4>最好记录：{{lastCount}}</h4>
-    <a-input-group compact>
-      <a-input v-model:value="randomInput" style="width: calc(100% - 1000px)" placeholder="请输入一个四位数" @pressEnter="inputValidation()"/>
+    <div>
+      <span>
+          最好记录：{{lastCount}}
+      </span>
+      <span style="margin-left:5rem">
+        您已猜测次数: {{guessCount}}
+      </span>
+    </div>
+    <a-input-group compact class="a-input-group">
+      <a-input v-model:value="randomInput" style="width: 20rem" placeholder="请输入一个四位数" @pressEnter="inputValidation()"/>
       <a-button type="primary" @click="inputValidation()">确认</a-button>
     </a-input-group>
     <div>
       <div>您的猜测记录：</div>
       <div style="width:280px;margin:0 auto">{{countHistory}} </div>
-      
     </div>
   </div>
 </template>
@@ -67,7 +72,7 @@ export default {
               }
           }
       }
-      return `相同位数数字-不同位数数字: ${result[0]} - ${result[1]}`
+      return `同位相同数字-异位相同数字: ${result[0]} - ${result[1]}`
     }
     const inputValidation = () =>{
       console.log(preRandom)
@@ -104,18 +109,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.a-input-group{
+  margin-top: 1rem
 }
 </style>
