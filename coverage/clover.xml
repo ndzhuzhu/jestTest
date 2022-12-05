@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668667706371" clover="3.2.0">
-  <project timestamp="1668667706371" name="All files">
-    <metrics statements="31" coveredstatements="24" conditionals="8" coveredconditionals="2" methods="4" coveredmethods="4" elements="43" coveredelements="30" complexity="0" loc="31" ncloc="31" packages="1" files="2" classes="2"/>
-    <file name="jestTest.js" path="D:\jestTest\jestTest.js">
-      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="5" count="3" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="7" count="3" type="stmt"/>
-      <line num="8" count="12" type="stmt"/>
-      <line num="9" count="12" type="cond" truecount="2" falsecount="0"/>
-      <line num="10" count="3" type="stmt"/>
-      <line num="12" count="9" type="stmt"/>
-      <line num="13" count="9" type="stmt"/>
-      <line num="16" count="3" type="stmt"/>
-      <line num="17" count="3" type="stmt"/>
-      <line num="18" count="12" type="stmt"/>
-      <line num="20" count="3" type="stmt"/>
+<coverage generated="1670206904363" clover="3.2.0">
+  <project timestamp="1670206904363" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3" elements="31" coveredelements="31" complexity="0" loc="22" ncloc="22" packages="1" files="2" classes="2"/>
+    <file name="createRandom.js" path="D:\jestTest\assets\createRandom.js">
+      <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <line num="2" count="13" type="stmt"/>
+      <line num="3" count="13" type="stmt"/>
+      <line num="4" count="13" type="stmt"/>
+      <line num="5" count="13" type="stmt"/>
+      <line num="6" count="13" type="stmt"/>
+      <line num="7" count="13" type="stmt"/>
+      <line num="8" count="49" type="stmt"/>
+      <line num="9" count="49" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="10" type="stmt"/>
+      <line num="12" count="39" type="stmt"/>
+      <line num="13" count="39" type="stmt"/>
+      <line num="16" count="52" type="stmt"/>
     </file>
-    <file name="jestTestfn.js" path="D:\jestTest\jestTestfn.js">
-      <metrics statements="17" coveredstatements="10" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="22" count="0" type="stmt"/>
-      <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="25" count="0" type="stmt"/>
-      <line num="27" count="0" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
+    <file name="judgeNumberSimilarity.js" path="D:\jestTest\assets\judgeNumberSimilarity.js">
+      <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="4" count="15" type="stmt"/>
+      <line num="5" count="15" type="stmt"/>
+      <line num="6" count="15" type="stmt"/>
+      <line num="7" count="15" type="stmt"/>
+      <line num="8" count="60" type="stmt"/>
+      <line num="9" count="240" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="40" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="20" type="stmt"/>
+      <line num="13" count="20" type="stmt"/>
+      <line num="18" count="15" type="stmt"/>
     </file>
   </project>
 </coverage>
